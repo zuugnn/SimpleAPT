@@ -39,8 +39,7 @@ def get_sido_info():
             "centerLon": 126.977872,
             "cortarName": "서울시",
             "cortarType": "city",
-        }  # ,
-        # {"cortarNo": "4100000000", "centerLat": 37.274939, "centerLon": 127.008689, "cortarName": "경기도", "cortarType": "city"}
+        }  # , {"cortarNo": "4100000000", "centerLat": 37.274939, "centerLon": 127.008689, "cortarName": "경기도", "cortarType": "city"}
     ]
     return temp
 
@@ -69,11 +68,10 @@ def get_sido_info():
 
 
 def get_gungu_info(sido_code):
-    """
-    down_url = 'https://new.land.naver.com/api/regions/list?cortarNo=' + sido_code
+    down_url = "https://new.land.naver.com/api/regions/list?cortarNo=" + sido_code
     temp = request_header(down_url)
-    temp = pd.DataFrame(temp['regionList'])[["cortarNo", "cortarName"]]
-    temp = temp.to_dict('records')
+    temp = pd.DataFrame(temp["regionList"])[["cortarNo", "cortarName"]]
+    temp = temp.to_dict("records")
     """
     # 강남구만
     temp = [
@@ -85,6 +83,7 @@ def get_gungu_info(sido_code):
             "cortarType": "dvsn",
         }
     ]
+    """
 
     return temp
 
@@ -451,12 +450,16 @@ for m in range(len(sido_list)):
 
             if len(apt_list_data) > 0:
                 dong_apt_list.append(pd.concat(apt_list_data))
-        """
-        gungu_apt_list = pd.concat(dong_apt_list, ignore_index=True)
-        gungu_apt_list.to_csv("./DevPy/addAPT/" + sido_name + " " + gungu_name + ".csv", encoding="CP949", index=False)
 
-with open("./DevPy/addAPT/complexMarkerInfo.js", "w", encoding="UTF-8") as f:
+        gungu_apt_list = pd.concat(dong_apt_list, ignore_index=True)
+        gungu_apt_list.to_csv(
+            "./DEV/SimpleAPT/data/" + sido_name + " " + gungu_name + ".csv",
+            encoding="CP949",
+            index=False,
+        )
+
+with open("./DEV/SimpleAPT/res/complexMarkerInfo.js", "w", encoding="UTF-8") as f:
     f.write("var complexMarkerInfo = ")
-with open("./DevPy/addAPT/complexMarkerInfo.js", "a", encoding="UTF-8") as f:
+with open("./DEV/SimpleAPT/res/complexMarkerInfo.js", "a", encoding="UTF-8") as f:
     json.dump(marker, f, indent="\t", ensure_ascii=False)
-"""
+
