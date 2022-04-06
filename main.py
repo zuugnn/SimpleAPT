@@ -453,13 +453,13 @@ for m in range(len(sido_list)):
 
         gungu_apt_list = pd.concat(dong_apt_list, ignore_index=True)
         gungu_apt_list.to_csv(
-            "./DEV/SimpleAPT/data/" + sido_name + " " + gungu_name + ".csv",
+            "./data/" + sido_name + " " + gungu_name + ".csv",
             encoding="CP949",
             index=False,
         )
 
-with open("./DEV/SimpleAPT/res/complexMarkerInfo.js", "w", encoding="UTF-8") as f:
+with open("./res/complexMarkerInfo.js", "w", encoding="UTF-8") as f:
     f.write("var complexMarkerInfo = ")
-with open("./DEV/SimpleAPT/res/complexMarkerInfo.js", "a", encoding="UTF-8") as f:
+with open("./res/complexMarkerInfo.js", "a", encoding="UTF-8") as f:
     json.dump(marker, f, indent="\t", ensure_ascii=False)
 
