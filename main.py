@@ -431,7 +431,7 @@ for m in range(len(sido_list)):
 
                 apt_list_data.append(apt_detail_pd)
 
-                # 마커 정보
+                ### 마커 정보 ###
                 marker_info["dong"] = dong
                 marker_info["complexName"] = complexName
                 marker_info["complexNo"] = complexNo
