@@ -1,119 +1,11 @@
-var categoryInfo = [
-	[
+var categoryInfo = {
+	"0": [
 		{
 			"cateName": "집 구하기",
 			"parentName": ""
 		}
 	],
-	[
-		{
-			"cateName": "서울시",
-			"parentName": "집 구하기"
-		}
-	],
-	[
-		{
-			"cateName": "강남구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "강동구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "강북구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "강서구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "관악구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "광진구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "구로구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "금천구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "노원구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "도봉구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "동대문구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "동작구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "마포구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "서대문구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "서초구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "성동구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "성북구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "송파구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "양천구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "영등포구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "용산구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "은평구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "종로구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "중구",
-			"parentName": "서울시"
-		},
-		{
-			"cateName": "중랑구",
-			"parentName": "서울시"
-		}
-	],
-	[
+	"3": [
 		{
 			"cateName": "개포동",
 			"parentName": "강남구"
@@ -1982,5 +1874,113 @@ var categoryInfo = [
 			"cateName": "중화동",
 			"parentName": "중랑구"
 		}
+	],
+	"2": [
+		{
+			"cateName": "강남구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "강동구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "강북구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "강서구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "관악구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "광진구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "구로구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "금천구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "노원구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "도봉구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "동대문구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "동작구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "마포구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "서대문구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "서초구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "성동구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "성북구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "송파구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "양천구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "영등포구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "용산구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "은평구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "종로구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "중구",
+			"parentName": "서울시"
+		},
+		{
+			"cateName": "중랑구",
+			"parentName": "서울시"
+		}
+	],
+	"1": [
+		{
+			"cateName": "서울시",
+			"parentName": "집 구하기"
+		}
 	]
-]
+}
