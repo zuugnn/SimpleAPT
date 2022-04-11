@@ -27,7 +27,7 @@ def get_regions(code):
     return temp
 
 
-cate = []
+cate = [[], [], [], []]
 cate_info = {}
 sido_list = [
     {
@@ -38,6 +38,10 @@ sido_list = [
         "cortarType": "city",
     }
 ]
+cate_info["cateName"] = "집 구하기"
+cate_info["parentName"] = ""
+cate_temp = dict(cate_info)
+cate[0].append(cate_temp)
 
 for m in range(len(sido_list)):
     sido_name = sido_list[m]["cortarName"]
@@ -46,7 +50,7 @@ for m in range(len(sido_list)):
     cate_info["cateName"] = sido_name
     cate_info["parentName"] = "집 구하기"
     cate_temp = dict(cate_info)
-    cate.append(cate_temp)
+    cate[1].append(cate_temp)
     # 해당 시의 모든 구
     for j in range(gungu_cnt):
         gungu_name = gungu_list[j]["cortarName"]
@@ -56,7 +60,7 @@ for m in range(len(sido_list)):
         cate_info["cateName"] = gungu_name
         cate_info["parentName"] = sido_name
         cate_temp = dict(cate_info)
-        cate.append(cate_temp)
+        cate[2].append(cate_temp)
         # 해당 구의 모든 동
         for k in range(dong_cnt):
             dong_name = dong_list[k]["cortarName"]
@@ -64,7 +68,8 @@ for m in range(len(sido_list)):
             cate_info["cateName"] = dong_name
             cate_info["parentName"] = gungu_name
             cate_temp = dict(cate_info)
-            cate.append(cate_temp)
+            cate[3].append(cate_temp)
+# print(cate)
 
 with open("./res/categoryInfo.js", "w", encoding="UTF-8") as f:
     f.write("var categoryInfo = ")
