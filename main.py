@@ -196,7 +196,7 @@ for m in range(len(sido_list)):
 
                 dong = str(apt_detail_temp.get("address"))  # 행정동
                 dong_array = dong.split()
-                cate_array1 = ["23", "25"]  # 미진열, 집 구하기
+                cate_array1 = ["570"]  # 집 구하기
                 for d in range(len(dong_array)):
                     for c in range(len(cate)):
                         if cate[c]["name"] == dong_array[d]:
