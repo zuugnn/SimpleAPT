@@ -68,6 +68,7 @@ def get_sido_info():
 
 
 def get_gungu_info(sido_code):
+    """
     down_url = "https://new.land.naver.com/api/regions/list?cortarNo=" + sido_code
     temp = request_header(down_url)
     temp = pd.DataFrame(temp["regionList"])[["cortarNo", "cortarName"]]
@@ -83,7 +84,6 @@ def get_gungu_info(sido_code):
             "cortarType": "dvsn",
         }
     ]
-    """
 
     return temp
 
@@ -149,6 +149,7 @@ def get_HTHF(i, v):
 cate = get_Cafe24_cate()
 
 marker = []
+pyoengNamesArr = []
 
 sido_list = get_sido_info()
 for m in range(len(sido_list)):
@@ -331,6 +332,10 @@ for m in range(len(sido_list)):
                         str(apt_detail_temp.get("pyoengNames"))
                     )
                 )
+                # 평형 목록 만들기
+                for el in pyoengNames.split(","):
+                    el = el.strip()
+                    pyoengNamesArr.append(el)
 
                 apt_detail_pd.loc[n, "상품 상세설명"] = (
                     """<table class="infoTable_wrap">
@@ -450,7 +455,7 @@ for m in range(len(sido_list)):
 
             if len(apt_list_data) > 0:
                 dong_apt_list.append(pd.concat(apt_list_data))
-
+        """
         gungu_apt_list = pd.concat(dong_apt_list, ignore_index=True)
         gungu_apt_list.to_csv(
             "./data/" + sido_name + " " + gungu_name + ".csv",
@@ -462,4 +467,8 @@ with open("./res/complexMarkerInfo.js", "w", encoding="UTF-8") as f:
     f.write("var complexMarkerInfo = ")
 with open("./res/complexMarkerInfo.js", "a", encoding="UTF-8") as f:
     json.dump(marker, f, indent="\t", ensure_ascii=False)
-
+"""
+pyoengNamesSet = set(pyoengNamesArr)  # 집합set으로 변환
+pyoengNamesArr = list(pyoengNamesSet)  # list로 변환
+pyoengNamesArr.sort()
+print(pyoengNamesArr)
